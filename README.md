@@ -23,6 +23,6 @@ Implement a new option “-v” that emits verbose timing data. The flag v was i
 
 Imported the dtoa library to use the optimized dtoa_fast function.. Replaced strtod with strtod_fast.
 
-# What improved from the baseline?
+## What improved from the baseline?
 
 In the original ministat.c perf report the functions that consumed the most amount of CPU were msort, ReadSet, strtod and dbl_cmp. After the optimization, in comparison to the original ministat.c the final merge sort had less CPU consumption when using an_qsort_doubles. The optimized ministat program also spent less time in the real and user time in comparison to the original ministat.c.
