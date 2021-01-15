@@ -26,15 +26,3 @@ Imported the dtoa library to use the optimized dtoa_fast function.. Replaced str
 # What improved from the baseline?
 
 In the original ministat.c perf report the functions that consumed the most amount of CPU were msort, ReadSet, strtod and dbl_cmp. After the optimization, in comparison to the original ministat.c the final merge sort had less CPU consumption when using an_qsort_doubles. The optimized ministat program also spent less time in the real and user time in comparison to the original ministat.c.
-
-# What were the most beneficial optimizations?
-
-The most beneficial optimization was implementing a multithreaded architecture.
-
-# What was least effective?
-
-In the optimized version of ministat.c the program consumed more CPU for the strtod function, in the original ministat.c the strtod consumed 7.48% of the CPU and in the optimized version of ministat.c the implementation used "dtoa/strtod-lite.c" to use strtod-fast but the amount of CPU consumed was reported at 10.53% for this function.
-
-# What challenges have you encountered?
-
-Multithreading was the biggest issue we encountered. We initially had each file being read by one thread but we wanted to experiment with each file being read by multiple threads. This was the biggest hurdle because of the calculations from where each thread would start reading until where they would start. We kept getting segmentation faults because the last thread was reading beyond the file size. After fixing and testing the code, we decided having multiple threads read one file was the most optimized to get the whole set of doubles from the file.
