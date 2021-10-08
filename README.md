@@ -21,9 +21,9 @@ The objective of this project is to optimize ministat (a small tool to do the st
 ```
 
 ## Performance before optimization
-![Alt text](ministat-optimization/screenshots/before-opt.png?raw=true " ")
+![Alt text](screenshots/before-opt.png?raw=true " ")
 
 
 ## Performance after optimization
-![Alt text](ministat-optimization/screenshots/after-opt.png?raw=true " ")
+![Alt text](screenshots/after-opt.png?raw=true " ")
 
