@@ -30,15 +30,15 @@ Each file was read by multiple threads. A new struct was created named work whic
 Implement a new option “-v” that emits verbose timing data. The flag v was implemented on the main function of ministat.c and it only set the flag to 1. After the switch statement on the main function, we added an if statement to print out the nanoseconds of the time taken from both the ReadSet function and the Main function. We set clock_monotonic to register the time when each of the functions start and when it finishes running. This time is recorded onto elapsed_us, a function that just subtracts the start time by the end time and adds it to an array t_elap, that will print out the time whenever the compilation asks for the flag -v.
 ```
 
-## Performance before optimization
+### Performance before optimization
 ![Alt text](screenshots/before-opt.png?raw=true " ")
 
 
-## Performance after optimization
+### Performance after optimization
 ![Alt text](screenshots/complete-opt.png?raw=true " ")
 
 
-## Conclusion
+### Conclusion
 ```
 In the original ministat.c perf report the functions that consumed the most amount of CPU were msort, ReadSet, strtod and dbl_cmp. After the optimization, in comparison to the original ministat.c the final merge sort had less CPU consumption when using an_qsort_doubles. The optimized ministat program also spent less time in the real and user time in comparison to the original ministat.c.
 ```
