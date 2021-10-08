@@ -4,7 +4,7 @@
 * [Strategies for Implemetation](#strategies-for-implemetation)
 * [Conclusion](#conclusion)
 
-## General info
+## General 
 ```
 The objective of this project is to optimize ministat (a small tool to do the statistics legwork on benchmarks)
 ```
@@ -12,14 +12,13 @@ The objective of this project is to optimize ministat (a small tool to do the st
 ## Optimization of Ministat 
 
 ### Goals
-```
-1. Implement a new data structure for inserting new data points by usig realloc without using calloc or memcpy
-2. Implement an_qsort by including the an_qsort.inc file
-3. Implement raw I/O read, write, close where file descriptor is changed to STDIN_FILENO 
-4. Implement Multithreading where each file is read by multiple threads
-5. Implement V Flag where an implemention of a new option “-v” that emits verbose timing data
-6. Implement Strtod_fast by importing the dtoa library to use the optimized dtoa_fast function
-```
+- [x] Implement a new data structure for inserting new data points by usig realloc without using calloc or memcpy
+- [x] Implement an_qsort by including the an_qsort.inc file
+- [x] Implement raw I/O read, write, close where file descriptor is changed to STDIN_FILENO 
+- [x] Implement Multithreading where each file is read by multiple threads
+- [x] Implement V Flag where an implemention of a new option “-v” that emits verbose timing data
+- [x] Implement Strtod_fast by importing the dtoa library to use the optimized dtoa_fast function
+
 
 ## Strategies for Implemetation
 ### Multithreading
@@ -38,7 +37,4 @@ Implement a new option “-v” that emits verbose timing data. The flag v was i
 
 ### Conclusion
 In the original ministat.c perf report the functions that consumed the most amount of CPU were msort, ReadSet, strtod and dbl_cmp. After the optimization, in comparison to the original ministat.c the final merge sort had less CPU consumption when using an_qsort_doubles. The optimized ministat program also spent less time in the real and user time in comparison to the original ministat.c.
-
-
-
 
