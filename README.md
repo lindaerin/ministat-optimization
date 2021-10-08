@@ -1,13 +1,12 @@
 ## Table of contents
-* [General info](#general-info)
+* [Objective](#objective)
 * [Optimization of Ministat](#optimization-of-ministat )
 * [Strategies for Implemetation](#strategies-for-implemetation)
 * [Conclusion](#conclusion)
 
-## General 
-```
-The objective of this project is to optimize ministat (a small tool to do the statistics legwork on benchmarks)
-```
+## Objective
+:grey_exclamation: The objective of this project is to optimize ministat (a small tool to do the statistics legwork on benchmarks)
+
 
 ## Optimization of Ministat 
 
