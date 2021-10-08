@@ -10,7 +10,7 @@ The objective of this project is to optimize ministat (a small tool to do the st
 
 ## Optimization of Ministat 
 
-Goals
+### Goals
 ```
 1. Implement a new data structure for inserting new data points by changing the algorithm to use realloc without using calloc or memcpy
 2.  Implement an_qsort by including the an_qsort.inc file
