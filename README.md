@@ -20,4 +20,10 @@ The objective of this project is to optimize ministat (a small tool to do the st
 6.  Implement Strtod_fast by importing the dtoa library to use the optimized dtoa_fast function.. Replaced strtod with strtod_fast
 ```
 
-# Original Ministat Perf Report
+## Performance before optimization
+![Alt text](ministat-optimization/screenshots/before-opt.png?raw=true " ")
+
+
+## Performance after optimization
+![Alt text](ministat-optimization/screenshots/after-opt.png?raw=true " ")
+
